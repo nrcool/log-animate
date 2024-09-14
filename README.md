@@ -1,6 +1,15 @@
-# log
+# log-animate
+# express-server-kit
 
-`log-animate` is a lightweight, zero-dependency logging utility, thoughtfully crafted by **Naqvi**. This package enables developers to easily display dynamic animations, progress bars, timers, and styled messages in the console. Built entirely from scratch without the use of any external libraries, `log` offers a simple yet powerful way to enhance terminal output with customizable text and background colors.
+[![VERSION](https://img.shields.io/badge/version-1.0.1-brightgreen)](https://www.npmjs.com/package/log-animate)
+
+[![LICENSE](https://img.shields.io/badge/LICENSE-MIT-orange)](https://www.npmjs.com/package/log-animate)
+
+[![AUTHOR](https://img.shields.io/badge/AUTHOR-NAQVI-yellow)](https://www.npmjs.com/package/log-animate)
+
+# log-animate
+
+`log-animate` is a lightweight, zero-dependency logging utility, thoughtfully crafted by **Naqvi**. This package enables developers to easily display dynamic animations, progress bars, timers, and styled messages in the console. Built entirely from scratch without the use of any external libraries, `log-animate` offers a simple yet powerful way to enhance terminal output with customizable text and background colors.
 
 ## Key Features:
 - **Zero dependencies**: Fully self-contained, with no reliance on external packages.
@@ -8,7 +17,7 @@
 - **Dynamic animations**: Includes built-in support for loading animations, progress bars, timers, and spinners.
 
 
-## Installation
+## Installation 🏭
 
 To install the package, run the following command:
 
@@ -16,7 +25,7 @@ To install the package, run the following command:
 npm install log-animate
 ```
 
-## Usage
+## Usage 😃
 
 ### Importing the log package
 
@@ -24,7 +33,7 @@ npm install log-animate
 import logAnimate from "log-animate";
 ```
 
-### Example 1: Loading Animation
+### Example 1: Loading Animation ⌛
 
 This example demonstrates how to show a loading animation in the console.
 
@@ -44,7 +53,7 @@ setInterval(() => {
 }, 1000);
 ```
 
-### Example 2: Progress Bar
+### Example 2: Progress Bar 🟩🟩🟩🟩🟩
 
 This example simulates a progress bar, updating every second.
 
@@ -62,7 +71,7 @@ let intervalProgress = setInterval(() => {
 }, 1000);
 ```
 
-### Example 3: Timer Animation
+### Example 3: Timer Animation ⏰
 
 Displays a timer that cycles through different clock emojis and times.
 
@@ -92,7 +101,7 @@ let interval = setInterval(() => {
 }, 1000);
 ```
 
-### Example 4: Spinner
+### Example 4: Spinner 🌀
 
 Displays a simple spinning animation.
 
@@ -119,7 +128,7 @@ In this example:
 
 The available colors are defined in the ANSI color map and can include options such as `red`, `green`, `yellow`, `blue`, etc.
 
-### Example 5: Real-Time Clock
+### Example 5: Real-Time Clock 1⩇:2⩇
 
 Logs the current UTC time every second with a green background.
 
@@ -128,6 +137,12 @@ setInterval(() => {
   logAnimate(new Date().toUTCString(), "white","green");
 }, 1000);
 ```
+## Author ✍️
+[**Naqvi 🇩🇪  **](https://github.com/nrcool)
+
+## Contribute 🤝
+
+You can fork this repo and send me a PR.
 
 
 ### Keywords:
@@ -146,6 +161,3 @@ setInterval(() => {
 - zero-dependency
 - open-source
 
-## License
-
-MIT License

@@ -1,13 +1,17 @@
 {
   "name": "log-animate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/nrcool/log-animate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "[![VERSION](https://img.shields.io/badge/version-1.0.1-brightgreen)](https://www.npmjs.com/package/log-animate)"
 }

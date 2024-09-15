@@ -12,3 +12,7 @@ export default function logAnimate(
     `\r${ansiColorMap[bgcolor].background}${ansiColorMap[textColor].foreground}${input}\x1b[0m`
   );
 }
+
+export function logEnd() {
+  process.stdout.write("\n");
+}

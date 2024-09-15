@@ -1,5 +1,4 @@
 # log-animate
-# express-server-kit
 
 [![VERSION](https://img.shields.io/badge/version-1.0.1-brightgreen)](https://www.npmjs.com/package/log-animate)
 
@@ -30,7 +29,7 @@ npm install log-animate
 ### Importing the log package
 
 ```javascript
-import logAnimate from "log-animate";
+import logAnimate, {logEnd} from "log-animate";
 ```
 
 ### Example 1: Loading Animation ⌛
@@ -67,6 +66,7 @@ let intervalProgress = setInterval(() => {
   
   if (count === progress.length) {
     clearInterval(intervalProgress);
+    logEnd()
   }
 }, 1000);
 ```
@@ -97,6 +97,7 @@ let interval = setInterval(() => {
 
   if (index === timerLoader.length) {
     clearInterval(interval);
+    logEnd()
   }
 }, 1000);
 ```
@@ -136,7 +137,34 @@ Logs the current UTC time every second with a green background.
 setInterval(() => {
   logAnimate(new Date().toUTCString(), "white","green");
 }, 1000);
+``` 
+
+### Example 6: Displaying Logs on Separate Lines with Custom Colors
+
+If you want to print each log on a separate line, you can use the `logEnd()` function after each `logAnimate` call. This ensures that every log message is followed by a line break.
+
+```javascript
+import logAnimate,{logEnd } from "log-animate";
+
+// Log the first message with a red background and white text
+logAnimate("First Log Message", "red", "white");
+logEnd(); // Ends the first log and moves to a new line
+
+// Log the second message with a blue background and white text
+logAnimate("Second Log Message", "blue", "white");
+logEnd(); // Ends the second log and moves to a new line
 ```
+
+This example will display the first log message, move to the next line, and then display the second log message on a new line.
+
+### Result:
+
+- The first log (`"First Log Message"`) is printed with a red background and white text, followed by a line break.
+- The second log (`"Second Log Message"`) is printed on the next line with a blue background and white text.
+
+By using `logEnd()`, you ensure that each log message ends and moves to the next line, as expected.
+
+
 ## Author ✍️
 [**Naqvi 🇩🇪  **](https://github.com/nrcool)
 
@@ -145,19 +173,4 @@ setInterval(() => {
 You can fork this repo and send me a PR.
 
 
-### Keywords:
-- logging
-- console
-- terminal
-- animations
-- progress-bar
-- spinner
-- timer
-- custom colors
-- background color
-- text color
-- CLI
-- console logging
-- zero-dependency
-- open-source
 
